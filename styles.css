@@ -5,12 +5,19 @@
 }
 
 body {
+	position: relative;
 	font-family: 'Exo', sans-serif;
-	width: 100vw;
 	overflow-x: hidden;
+	max-width: 90%;
+}
+
+.content {
+	overflow-x: hidden;
+	max-width: 90%;
 }
 
 .section {
+	overflow-x: hidden;
 	width: 100vw;
 	height:100vh;
 }
@@ -68,10 +75,16 @@ body {
 }
 
 .second-area {
-	background-color: #A76571;
+	background-color: transparent;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.go-down-link {
+	position: absolute;
+	bottom: 10vh;
+	left: 50vw;
 }
 
 .text {
@@ -104,11 +117,19 @@ body {
 }
 
 .presentation {
-	height: calc(100vh - 40px);
-	width: calc(100vw - 40px);
+	height: 70vh;
+	width: 70vw;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+	padding: 20px;
+	position: relative;
+}
+
+@media (min-width:600px) { 
+	.presentation {
+		height: 50vh;
+	}
 }
 
 .profile-card-container {

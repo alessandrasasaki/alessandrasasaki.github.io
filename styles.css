@@ -49,7 +49,7 @@ body {
 }
 
 .first-area {
-	background:  linear-gradient(to bottom, rgba(239,71,111, 0.4), rgba(31,3,34, 1)), url("./images/background.jpg") no-repeat;
+	background:  linear-gradient(to bottom, rgba(227,101,136, 0.4), rgba(31,3,34, .9)), url("./images/background.jpg") no-repeat;
 	background-size: cover;
 	background-position: 50% 0;
 	z-index: -1;
@@ -125,9 +125,15 @@ body {
 	font-family: 'Exo', sans-serif, Arial, Helvetica;
 }
 
+@media (min-width:600px) { 
+	.text--title {
+		font-size: 50px;
+	}
+}
+
 .text--highlight {
 	display: inline-block;
-	color: 	rgba(239,71,111, 0.4);
+	color: 	rgba(239,71,111, 0.6);
 	-webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: black;
 }
@@ -142,6 +148,7 @@ body {
 	padding: 20px;
 	position: relative;
 	max-width: 800px;
+	color: rgba(0, 0, 0, 0.7);
 }
 
 .profile-card-container {

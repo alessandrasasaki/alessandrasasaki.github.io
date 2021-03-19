@@ -1,6 +1,7 @@
 const shineText = document.getElementById('shineText');
 const firstArea = document.getElementById('firstArea');
 const profileCard = document.getElementById('profileCard');
+const goDownLink = document.getElementById('goDownLink');
 
 let scrollYPos = 0;
 let ticking = false;
@@ -10,6 +11,7 @@ document.addEventListener('scroll', () => {
   if (!ticking) {
     window.requestAnimationFrame(() => {
       getDark(window.scrollY);
+      changeTextContainerZindex(window.scrollY);
       showProfileCard();
       ticking = false;
     });
@@ -40,11 +42,16 @@ const showProfileCard = () =>  {
 
 const getDark = (scrollPos) => {
   scrollPos > 90 ? firstArea.classList.add('area-dark') : firstArea.classList.remove('area-dark');
-  scrollPos > 100 ? shineText.classList.add('text--shining') : shineText.classList.remove('text--shining');
 }
+
+const changeTextContainerZindex = (scrollPos) => {
+  scrollPos > 90 ? goDownLink.classList.remove('go-down-link--upper') : goDownLink.classList.add('go-down-link--upper');
+}
+
 
 const initialSetup = () => {
   getDark(window.scrollY);
+  changeTextContainerZindex(window.scrollY);
   showProfileCard();
 };
 

@@ -1,7 +1,7 @@
 const shineText = document.getElementById('shineText');
 const firstSection = document.getElementById('firstSection');
 const profileCard = document.getElementById('profileCard');
-const profileCardAvatar = document.getElementById('profileCardAvatar');
+const profileCardName = document.getElementById('profileCardName');
 const goDownLink = document.getElementById('goDownLink');
 const footerText = document.getElementById('footerText');
 const buttonRight = document.getElementById('slideRight');
@@ -20,7 +20,7 @@ document.body.addEventListener('scroll', () => {
     window.requestAnimationFrame(() => {
       getDark(scrollYPos);
       changeTextContainerZindex(scrollYPos);
-      showProfileCardAvatar();
+      showProfileCard();
       ticking = false;
     });
     ticking = true;
@@ -45,11 +45,11 @@ const isInViewport = (elem) => {
 	);
 };
 
-const showProfileCardAvatar = () =>  {
-  if (isInViewport(profileCardAvatar) && profileCard.classList.contains('profile-card-container--visible')) {
+const showProfileCard = () =>  {
+  if (isInViewport(profileCardName) && profileCard.classList.contains('profile-card-container--visible')) {
     return;
   }
-  if (isInViewport(profileCardAvatar)) {
+  if (isInViewport(profileCardName)) {
     profileCard.classList.add('profile-card-container--visible');
     return;
   }
@@ -73,7 +73,7 @@ const setFooterText = () => {
 const initialSetup = () => {
   getDark(window.scrollY);
   changeTextContainerZindex(window.scrollY);
-  showProfileCardAvatar();
+  showProfileCard();
   setFooterText();
 };
 

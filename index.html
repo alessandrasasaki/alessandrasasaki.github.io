@@ -1,8 +1,11 @@
 <html>
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Alessandra Sasaki">
     <meta name="description" content="A chocolate lover & front-end developer.">
     <meta name="author" content="Alessandra Sasaki">
+		<meta name="og:image" content="./images/crop.jpg"/>
+    <title>Alessandra Sasaki</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./styles.css"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -124,7 +127,7 @@
 							<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 						</div> 
 						<p class="project-description">
-							Custom Radiobox made with AngularJS and Pure CSS
+							Custom Radiobox made with AngularJS & Pure CSS
 							<a href="https://codepen.io/asasaki/pen/ZEzxGOO" target="_blank">
 								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								width="511.626px" height="511.627px" viewBox="0 0 511.626 511.627" style="height: 16px; width: 16px; margin-left: 10px; fill: #fff;"
@@ -184,7 +187,7 @@
 					<div class="project">
 						<img class="project-thumb" src="./images/githubdash.gif" />	 
 						<p class="project-description">
-							Github Dashboard made with Nextjs
+							Github Dashboard made with React & Nextjs
 							<a href="https://github.com/alessandrasasaki/github-react-dashboard" target="_blank">
 								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								width="511.626px" height="511.627px" viewBox="0 0 511.626 511.627" style="height: 16px; width: 16px; margin-left: 10px; fill: #fff;"
@@ -231,13 +234,12 @@
 
 			<section class="section third-section">
 				<div class="presentation">
-					<a class="go-to-top-link" href="#top"> ✖ </a>
 					<div class="profile-card-container" id="profileCard"> 
 						<div class="profile-card__avatar-container"> 
-							<img class="profile-card__avatar" src="./images/crop.jpg" id="profileCardAvatar" />	 
+							<img class="profile-card__avatar" src="./images/crop.jpg" />	 
 						</div>
 						<div class="profile-card__information"> 
-								<div class="profile-card__name">
+								<div class="profile-card__name" id="profileCardName">
 									Alessandra Sasaki
 								</div>
 								<div class="profile-card__title">
@@ -358,6 +360,11 @@
 						</div>
 					</div>
 				</div>
+				<a class="go-to-top-link" href="#firstSection">
+					<div class="arrow-down-container">
+						<div class="arrow-down"></div>
+					</div>	 
+				</a>
 			</section>
 			<div class="footer">
 				<p id="footerText"></p>

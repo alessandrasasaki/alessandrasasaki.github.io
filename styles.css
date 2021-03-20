@@ -392,15 +392,21 @@ body {
 .profile-card__name {
 	font-size: 30px;
 	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 .profile-card__title {
 	font-size: 16px;
 	font-style: italic;
+	margin-bottom: 5px;
 }
 
 .profile-card__location {
 	font-size: 15px;
+}
+
+.profile-card__location-icon {
+	width: 13px;
 }
 
 .profile-card__social {
@@ -689,6 +695,10 @@ body {
 
 	.profile-card__location {
 		font-size: 20px;
+	}
+
+	.profile-card__location-icon {
+		width: 16px;
 	}
 
 	.stars {

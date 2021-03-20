@@ -1,25 +1,39 @@
 const shineText = document.getElementById('shineText');
-const firstArea = document.getElementById('firstArea');
+const firstSection = document.getElementById('firstSection');
 const profileCard = document.getElementById('profileCard');
 const profileCardAvatar = document.getElementById('profileCardAvatar');
 const goDownLink = document.getElementById('goDownLink');
 const footerText = document.getElementById('footerText');
+const buttonRight = document.getElementById('slideRight');
+const buttonLeft = document.getElementById('slideLeft');
+const projectsContainer = document.getElementById('projectsContainer');
 
 let scrollYPos = 0;
 let ticking = false;
 
-document.addEventListener('scroll', () => {
-  scrollYPos = window.scrollY;
+document.body.addEventListener('scroll', () => {
+  scrollYPos = document.body.scrollTop;
+
+  console.log();
+
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      getDark(window.scrollY);
-      changeTextContainerZindex(window.scrollY);
+      getDark(scrollYPos);
+      changeTextContainerZindex(scrollYPos);
       showProfileCardAvatar();
       ticking = false;
     });
     ticking = true;
   }
 });
+
+buttonRight.onclick = function () {
+  projectsContainer.scrollLeft += 250;
+};
+
+buttonLeft.onclick = function () {
+  projectsContainer.scrollLeft -= 250;
+};
 
 const isInViewport = (elem) => {
 	const distance = elem.getBoundingClientRect();
@@ -43,7 +57,7 @@ const showProfileCardAvatar = () =>  {
 }
 
 const getDark = (scrollPos) => {
-  scrollPos > 90 ? firstArea.classList.add('area-dark') : firstArea.classList.remove('area-dark');
+    scrollPos > 90 ? firstSection.classList.add('section-dark') : firstSection.classList.remove('section-dark');
 }
 
 const changeTextContainerZindex = (scrollPos) => {

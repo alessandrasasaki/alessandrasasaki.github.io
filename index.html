@@ -10,10 +10,11 @@
 		<meta property="og:image" content="https://imgur.com/DOJmdUh">
     <title>Alessandra Sasaki</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="./styles.css"/>
+		<link rel="stylesheet" href="./assets/css/Flickity/flickity.css" media="screen">
+		<link rel="stylesheet" href="./assets/css/styles.css"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Montserrat&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="./funcs.js" async></script>
+		<script type="text/javascript" src="./assets/js/index.js" async></script>
 	</head>
 	<body>
 		<div id="content">
@@ -44,9 +45,9 @@
 	
 			<section class="section second-section" id="secondSection">
 				<div class="text text--title"> Alguns projetos </div>
-				<div class="projects-container" id="projectsContainer">
+				<div class="projects-container main-gallery js-flickity" data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": true }' id="projectsContainer">
 					
-					<div class="project">
+					<div class="project gallery-cell">
 						<div class="project-thumb">	 
 							<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="asasaki" data-slug-hash="ZEzxGOO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Outline Float Label Pure CSS">
 								<span>See the Pen <a href="https://codepen.io/asasaki/pen/ZEzxGOO">
@@ -83,7 +84,7 @@
 						</p>
 					</div>
 
-					<div class="project">
+					<div class="project gallery-cell">
 						<div class="project-thumb">
 							<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="asasaki" data-slug-hash="gObwyPL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mobile Drag&amp;amp;Drop collapsible list of blocks with Sortable">
 								<span>See the Pen <a href="https://codepen.io/asasaki/pen/gObwyPL">
@@ -120,8 +121,8 @@
 						</p>
 					</div>
 
-					<div class="project">
-						<div class="project-thumb" src="./images/custom-radiobox.gif">	
+					<div class="project gallery-cell">
+						<div class="project-thumb" src="./assets/images/custom-radiobox.gif">	
 							<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="asasaki" data-slug-hash="vYYKpRO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Custom radiobox">
 								<span>See the Pen <a href="https://codepen.io/asasaki/pen/vYYKpRO">
 								Custom radiobox</a> by Alessandra Sasaki (<a href="https://codepen.io/asasaki">@asasaki</a>)
@@ -157,8 +158,8 @@
 						</p>
 					</div>
 
-					<div class="project">
-						<img class="project-thumb" src="./images/personalsite.gif" />	 
+					<div class="project gallery-cell">
+						<img class="project-thumb" src="./assets/images/personalsite.gif" />	 
 						<p class="project-description">
 							Old Personal Site made with jQuery, SASS & GULP
 							<a href="https://github.com/alessandrasasaki/personal-site" target="_blank">
@@ -187,8 +188,8 @@
 						</p>
 					</div>
 
-					<div class="project">
-						<img class="project-thumb" src="./images/githubdash.gif" />	 
+					<div class="project gallery-cell">
+						<img class="project-thumb" src="./assets/images/githubdash.gif" />	 
 						<p class="project-description">
 							Github Dashboard made with React & Nextjs
 							<a href="https://github.com/alessandrasasaki/github-react-dashboard" target="_blank">
@@ -218,18 +219,6 @@
 					</div>
 
 				</div>
-				<div class="slide-buttons-container">
-					<button id="slideLeft" class="slide-button slide-button--left">
-						<div class="arrow-down-container">
-							<div class="arrow-down"></div>
-						</div>	 
-					</button>
-					<button id="slideRight" class="slide-button slide-button--right"> 
-						<div class="arrow-down-container">
-							<div class="arrow-down"></div>
-						</div>
-					</button>
-				</div>
 			</div>
 			</section>
 
@@ -239,7 +228,7 @@
 				<div class="presentation">
 					<div class="profile-card-container" id="profileCard"> 
 						<div class="profile-card__avatar-container"> 
-							<img class="profile-card__avatar" src="./images/crop.jpg" />	 
+							<img class="profile-card__avatar" src="./assets/images/crop.jpg" />	 
 						</div>
 						<div class="profile-card__information"> 
 								<div class="profile-card__name" id="profileCardName">
@@ -358,8 +347,8 @@
 							</div>
 						</div>
 						<div class="profile-card__description"> 
-							Introvertida porém cômica, mais uma típica dev que gosta de jogos e códigos. O bug no meu setup é não gostar de café. 
-							<br />Formada em Ciência da Computação e fã de UX.
+							Introvertida porém da zueira, sou uma típica dev que gosta de jogos e códigos. O bug no meu setup é não gostar de café. 
+							<br />Formada em Ciência da Computação e fã de UX, sigo explicando pros parentes que eu não sei consertar a impressora... 
 						</div>
 					</div>
 				</div>
@@ -373,6 +362,7 @@
 				<p id="footerText"></p>
 			</div>
 		</div>
+		<script src="./assets/js/Flickity/flickity.pkgd.min.js"></script>
 	</body>
 </html>
 

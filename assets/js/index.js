@@ -11,8 +11,6 @@ let ticking = false;
 document.body.addEventListener('scroll', () => {
   scrollYPos = document.body.scrollTop;
 
-  console.log();
-
   if (!ticking) {
     window.requestAnimationFrame(() => {
       getDark(scrollYPos);
@@ -56,7 +54,7 @@ const changeTextContainerZindex = (scrollPos) => {
 const setFooterText = () => {
   const today = new Date();
   const year = today.getFullYear();
-  footerText.innerHTML = `Feito com ♡ por Alessandra Sasaki • ${year} \n <br /> HTML • CSS • Vanilla JS`;
+  footerText.innerHTML = `Feito com ♡ por Alessandra Sasaki • ${year} \n`;
 }
 
 const initialSetup = () => {
